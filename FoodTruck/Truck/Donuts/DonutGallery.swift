@@ -24,6 +24,7 @@ struct DonutGallery: View {
         .toolbarRole(.browser)
         .searchable(text: $model.searchText)
         .navigationTitle("Donuts")
+        .analyticsScreen(name: "donut_Gallery")
     }
 }
 

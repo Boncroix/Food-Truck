@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import FirebaseAnalytics
+import FirebaseAnalyticsSwift
 
 enum Navigation: Hashable {
     case donuts
@@ -68,6 +70,7 @@ struct ContentView: View {
             .sheet(isPresented: $model.isSettingsPresented) {
                 SettingsView(model: model)
             }
+            .analyticsScreen(name: "content_View")
         }
     }
 }

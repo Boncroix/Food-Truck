@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import FirebaseAnalytics
+import FirebaseAnalyticsSwift
 
 @Observable
 final class FoodTruckModel {
@@ -38,6 +40,7 @@ final class FoodTruckModel {
             uniqueKeysWithValues: donuts.map { ($0.id, $0)}
         )
         self.favouriteDonuts = favouriteDonuts
+        configureFirebase()
     }
     
     func isFavourite(donut: Donut) -> Bool {
@@ -48,6 +51,13 @@ final class FoodTruckModel {
     }
     
     func toggleFavourite(donut: Donut) {
+        Analytics.logEvent("donut_toggle_favorite", 
+                           parameters: [
+                                "donut_id" : donut.id,
+                                "donut_name" : donut.name,
+                                "is_favorite" : (!isFavourite(donut: donut)).description
+            ]
+        )
         if isFavourite(donut: donut) {
             favouriteDonuts.removeValue(forKey: donut.id)
             return
@@ -57,5 +67,30 @@ final class FoodTruckModel {
     
     func settingsButtonTapped() {
         isSettingsPresented = true
+    }
+    
+    func donutsCardTapped() {
+        Analytics.logEvent(
+            "donut-card-tapped",
+            parameters: [
+                "favourite_donuts-count": favouriteDonuts.values.count,
+                "donuts_count": donuts.values.count
+            
+            ]
+        )
+    }
+    
+    func handlePremiumAnalytics() {
+        Analytics.logEvent(
+            "premium_toggle",
+            parameters: [
+                "toogle_value": isPremiumUser.toggle(),
+            ]
+        )
+        Analytics.setUserProperty(isPremiumUser.description, forName: "is_premium")
+    }
+    
+    func configureFirebase() {
+        Analytics.setUserID(userID)
     }
 }

@@ -82,6 +82,7 @@ struct SettingsView: View {
                 }
             }
         }
+        .analyticsScreen(name: "settings_view")
     }
 }
 

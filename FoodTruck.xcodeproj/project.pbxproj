@@ -13,6 +13,9 @@
 		424883202C20B19400C0F5BD /* DonutGallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4248831F2C20B19400C0F5BD /* DonutGallery.swift */; };
 		424883222C20B22C00C0F5BD /* DonutGalleryGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424883212C20B22C00C0F5BD /* DonutGalleryGrid.swift */; };
 		424883252C20B96600C0F5BD /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424883242C20B96600C0F5BD /* SettingsView.swift */; };
+		424883282C20C67900C0F5BD /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 424883272C20C67900C0F5BD /* FirebaseAnalytics */; };
+		4248832A2C20C67900C0F5BD /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 424883292C20C67900C0F5BD /* FirebaseAnalyticsSwift */; };
+		4248832C2C20C8DA00C0F5BD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4248832B2C20C8D900C0F5BD /* GoogleService-Info.plist */; };
 		57C195522C1D63B700B82CEF /* FoodTruckApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C195512C1D63B700B82CEF /* FoodTruckApp.swift */; };
 		57C195542C1D63B700B82CEF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C195532C1D63B700B82CEF /* ContentView.swift */; };
 		57C195562C1D63B800B82CEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57C195552C1D63B800B82CEF /* Assets.xcassets */; };
@@ -57,6 +60,7 @@
 		4248831F2C20B19400C0F5BD /* DonutGallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonutGallery.swift; sourceTree = "<group>"; };
 		424883212C20B22C00C0F5BD /* DonutGalleryGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonutGalleryGrid.swift; sourceTree = "<group>"; };
 		424883242C20B96600C0F5BD /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		4248832B2C20C8D900C0F5BD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		57C1954E2C1D63B700B82CEF /* FoodTruck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodTruck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57C195512C1D63B700B82CEF /* FoodTruckApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTruckApp.swift; sourceTree = "<group>"; };
 		57C195532C1D63B700B82CEF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -85,6 +89,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4248832A2C20C67900C0F5BD /* FirebaseAnalyticsSwift in Frameworks */,
+				424883282C20C67900C0F5BD /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +160,7 @@
 		57C195502C1D63B700B82CEF /* FoodTruck */ = {
 			isa = PBXGroup;
 			children = (
+				4248832B2C20C8D900C0F5BD /* GoogleService-Info.plist */,
 				424883232C20B95600C0F5BD /* Settings */,
 				57C195822C1D6A9C00B82CEF /* Models */,
 				57C1957F2C1D665B00B82CEF /* Helpers */,
@@ -250,6 +257,10 @@
 			dependencies = (
 			);
 			name = FoodTruck;
+			packageProductDependencies = (
+				424883272C20C67900C0F5BD /* FirebaseAnalytics */,
+				424883292C20C67900C0F5BD /* FirebaseAnalyticsSwift */,
+			);
 			productName = FoodTruck;
 			productReference = 57C1954E2C1D63B700B82CEF /* FoodTruck.app */;
 			productType = "com.apple.product-type.application";
@@ -322,6 +333,9 @@
 				Base,
 			);
 			mainGroup = 57C195452C1D63B700B82CEF;
+			packageReferences = (
+				424883262C20C67800C0F5BD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 57C1954F2C1D63B700B82CEF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -340,6 +354,7 @@
 			files = (
 				57C195592C1D63B800B82CEF /* Preview Assets.xcassets in Resources */,
 				57C195562C1D63B800B82CEF /* Assets.xcassets in Resources */,
+				4248832C2C20C8DA00C0F5BD /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -722,6 +737,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		424883262C20C67800C0F5BD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.28.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		424883272C20C67900C0F5BD /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 424883262C20C67800C0F5BD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		424883292C20C67900C0F5BD /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 424883262C20C67800C0F5BD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 57C195462C1D63B700B82CEF /* Project object */;
 }
