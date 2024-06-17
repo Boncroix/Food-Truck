@@ -38,7 +38,7 @@ struct DonutsView: View {
                 }
                 
                 if visibleLayers.contains(.glaze) {
-                    let glaze = donut.glaze  {
+                    if let glaze = donut.glaze  {
                         glaze.image(thumbnail: useThumbnail)
                             .resizable()
                             .interpolation(.medium)
@@ -48,7 +48,7 @@ struct DonutsView: View {
                 }
                 
                 if visibleLayers.contains(.topping) {
-                    let topping = donut.topping  {
+                    if let topping = donut.topping  {
                         topping.image(thumbnail: useThumbnail)
                             .resizable()
                             .interpolation(.medium)

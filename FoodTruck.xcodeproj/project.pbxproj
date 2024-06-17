@@ -10,6 +10,9 @@
 		424883192C20A89100C0F5BD /* TrackDonutsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424883182C20A89100C0F5BD /* TrackDonutsCard.swift */; };
 		4248831C2C20A9C400C0F5BD /* DonutsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4248831B2C20A9C400C0F5BD /* DonutsView.swift */; };
 		4248831E2C20AF9400C0F5BD /* FoodTruckModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4248831D2C20AF9400C0F5BD /* FoodTruckModel.swift */; };
+		424883202C20B19400C0F5BD /* DonutGallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4248831F2C20B19400C0F5BD /* DonutGallery.swift */; };
+		424883222C20B22C00C0F5BD /* DonutGalleryGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424883212C20B22C00C0F5BD /* DonutGalleryGrid.swift */; };
+		424883252C20B96600C0F5BD /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424883242C20B96600C0F5BD /* SettingsView.swift */; };
 		57C195522C1D63B700B82CEF /* FoodTruckApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C195512C1D63B700B82CEF /* FoodTruckApp.swift */; };
 		57C195542C1D63B700B82CEF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C195532C1D63B700B82CEF /* ContentView.swift */; };
 		57C195562C1D63B800B82CEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57C195552C1D63B800B82CEF /* Assets.xcassets */; };
@@ -51,6 +54,9 @@
 		424883182C20A89100C0F5BD /* TrackDonutsCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDonutsCard.swift; sourceTree = "<group>"; };
 		4248831B2C20A9C400C0F5BD /* DonutsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonutsView.swift; sourceTree = "<group>"; };
 		4248831D2C20AF9400C0F5BD /* FoodTruckModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTruckModel.swift; sourceTree = "<group>"; };
+		4248831F2C20B19400C0F5BD /* DonutGallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonutGallery.swift; sourceTree = "<group>"; };
+		424883212C20B22C00C0F5BD /* DonutGalleryGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonutGalleryGrid.swift; sourceTree = "<group>"; };
+		424883242C20B96600C0F5BD /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		57C1954E2C1D63B700B82CEF /* FoodTruck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodTruck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57C195512C1D63B700B82CEF /* FoodTruckApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTruckApp.swift; sourceTree = "<group>"; };
 		57C195532C1D63B700B82CEF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -111,8 +117,18 @@
 			isa = PBXGroup;
 			children = (
 				4248831B2C20A9C400C0F5BD /* DonutsView.swift */,
+				4248831F2C20B19400C0F5BD /* DonutGallery.swift */,
+				424883212C20B22C00C0F5BD /* DonutGalleryGrid.swift */,
 			);
 			path = Donuts;
+			sourceTree = "<group>";
+		};
+		424883232C20B95600C0F5BD /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				424883242C20B96600C0F5BD /* SettingsView.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		57C195452C1D63B700B82CEF = {
@@ -138,6 +154,7 @@
 		57C195502C1D63B700B82CEF /* FoodTruck */ = {
 			isa = PBXGroup;
 			children = (
+				424883232C20B95600C0F5BD /* Settings */,
 				57C195822C1D6A9C00B82CEF /* Models */,
 				57C1957F2C1D665B00B82CEF /* Helpers */,
 				57C1957B2C1D64F000B82CEF /* Truck */,
@@ -352,10 +369,13 @@
 				4248831C2C20A9C400C0F5BD /* DonutsView.swift in Sources */,
 				57C1959D2C1D784C00B82CEF /* DonutLayer.swift in Sources */,
 				57C1959B2C1D781D00B82CEF /* DonutLatticeLayout.swift in Sources */,
+				424883252C20B96600C0F5BD /* SettingsView.swift in Sources */,
 				57C1958A2C1D6B6000B82CEF /* Topping.swift in Sources */,
 				57C195862C1D6AEA00B82CEF /* Dough.swift in Sources */,
 				57C195542C1D63B700B82CEF /* ContentView.swift in Sources */,
 				57C195842C1D6AA600B82CEF /* Donut.swift in Sources */,
+				424883222C20B22C00C0F5BD /* DonutGalleryGrid.swift in Sources */,
+				424883202C20B19400C0F5BD /* DonutGallery.swift in Sources */,
 				57C195812C1D666A00B82CEF /* Interpolation.swift in Sources */,
 				57C195882C1D6B4600B82CEF /* Glaze.swift in Sources */,
 				57C1958E2C1D6BC600B82CEF /* Image+FlavorSymbol.swift in Sources */,
@@ -526,7 +546,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FoodTruck/Preview Content\"";
-				DEVELOPMENT_TEAM = 6SZ9MGTL76;
+				DEVELOPMENT_TEAM = L6V6H2LAL2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "Food Truck";
@@ -540,7 +560,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.adsilva.FoodTruck;
+				PRODUCT_BUNDLE_IDENTIFIER = "J.B.C..Marvel-KC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -560,7 +580,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FoodTruck/Preview Content\"";
-				DEVELOPMENT_TEAM = 6SZ9MGTL76;
+				DEVELOPMENT_TEAM = L6V6H2LAL2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "Food Truck";
@@ -574,7 +594,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.adsilva.FoodTruck;
+				PRODUCT_BUNDLE_IDENTIFIER = "J.B.C..Marvel-KC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
