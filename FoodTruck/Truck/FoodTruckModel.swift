@@ -8,6 +8,8 @@
 import SwiftUI
 import FirebaseAnalytics
 import FirebaseAnalyticsSwift
+import FirebaseCrashlytics
+import FirebaseCrashlyticsSwift
 
 @Observable
 final class FoodTruckModel {
@@ -44,6 +46,7 @@ final class FoodTruckModel {
     }
     
     func isFavourite(donut: Donut) -> Bool {
+        let firstFavouriteDonut = favouriteDonuts.values.first
         if let _ = favouriteDonuts[donut.id] {
             return true
         }
@@ -58,11 +61,20 @@ final class FoodTruckModel {
                                 "is_favorite" : (!isFavourite(donut: donut)).description
             ]
         )
+        
+        guard let something = donuts.values.first else {
+            assertionFailure("")
+            Crashlytics.crashlytics().log("Expected to find first donut but didn't find any")
+            return
+        }
+        
         if isFavourite(donut: donut) {
             favouriteDonuts.removeValue(forKey: donut.id)
+            Crashlytics.crashlytics().log("Expected to find a fovourite donut")
             return
         }
         favouriteDonuts[donut.id] = donut
+        Crashlytics.crashlytics().log("Expected to add a fovourite donut")
     }
     
     func settingsButtonTapped() {
